@@ -12,6 +12,7 @@ export default function Maincon() {
     useEffect(() => {
         let api = fetch(`https://pixabay.com/api/?key=46193687-1ee9f7465fd5eeca96a352d5f&q=${search}&image_type=photo`);
         api.then(res => res.json()).then(val => setApi(val.hits))
+        .catch((e)=> console.error(e))
     })
 
 
